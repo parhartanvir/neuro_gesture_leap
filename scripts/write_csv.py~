@@ -1,0 +1,21 @@
+import csv
+import numpy as np
+from numpy import genfromtxt
+with open('test.csv', 'w') as fp:
+    a = csv.writer(fp, delimiter=',')
+    data = [['Me', 'You'],
+            ['293', '219'],
+            ['54', '13']]
+    a.writerows(data)
+
+a=np.genfromtxt('test.csv',delimiter=',')
+for line in open('test.csv'):
+   
+   csv_row = line.split()
+print csv_row[0]
+print a[2,1]
+
+out_vec=[]
+out_mat=[]
+out_mat=np.matlib.identity(3)
+print out_mat
